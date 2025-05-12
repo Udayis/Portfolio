@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer"
-import aboutusImage from "../assets/images/uday rathod.jpg"
+import aboutusImage from "../assets/images/uday rathod.jpeg"
 
 function About() {
   const { ref, inView } = useInView({
@@ -15,7 +15,7 @@ function About() {
             About <span className="text-primary">Me</span>
           </h2>
           <p className="text-muted mx-auto" style={{ maxWidth: "800px", fontSize: "1.2rem" }}>
-            Passionate full stack developer with a keen eye for creating engaging user experiences and modern web applications.
+            Passionate Front End Developer specializing in creating responsive and user-friendly websites with modern technologies.
           </p>
         </div>
 
@@ -33,12 +33,12 @@ function About() {
 
           <div className="col-lg-7">
             <div className="content-wrapper">
-              <h3 className="fs-2 fw-bold mb-4 animate-up">Full Stack Developer</h3>
+              <h3 className="fs-2 fw-bold mb-4 animate-up">Front End Developer</h3>
               <p className="text-muted mb-4 animate-up delay-1">
-                Dynamic full stack developer with expertise in MERN stack development. Skilled in creating efficient and scalable web applications with modern technologies.
+              Hello! I'm a passionate frontend developer with a keen eye for creating engaging user experiences. With a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React, I build responsive and intuitive web applications.
               </p>
               <p className="text-muted mb-4 animate-up delay-2">
-                Passionate about developing innovative solutions and continuously learning new technologies. Committed to writing clean, maintainable code and creating exceptional user experiences.
+              My journey in web development started 5 years ago, and since then, I've worked on various projects ranging from small business websites to complex web applications. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.
               </p>
 
               <div className="row info-grid">
@@ -47,7 +47,7 @@ function About() {
                     <i className="bi bi-person text-primary"></i>
                     <div>
                       <p className="fw-medium mb-1">Name:</p>
-                      <p className="text-muted mb-0">Deep Gadhiya</p>
+                      <p className="text-muted mb-0">Uday Rathod</p>
                     </div>
                   </div>
                 </div>
@@ -56,28 +56,20 @@ function About() {
                     <i className="bi bi-envelope text-primary"></i>
                     <div>
                       <p className="fw-medium mb-1">Email:</p>
-                      <p className="text-muted mb-0">deepgadhiya20@gmail.com</p>
+                      <p className="text-muted mb-0">udayrathod060@gmail.com</p>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 mb-3">
                   <div className="info-card animate-up delay-5">
-                    <i className="bi bi-geo-alt text-primary"></i>
+                    <i className="bi bi-telephone text-primary"></i>
                     <div>
-                      <p className="fw-medium mb-1">Location:</p>
-                      <p className="text-muted mb-0">Morbi, Gujarat, India</p>
+                      <p className="fw-medium mb-1">Phone:</p>
+                      <p className="text-muted mb-0">+91 9313353147</p>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6 mb-3">
-                  <div className="info-card animate-up delay-5">
-                    <i className="bi bi-briefcase text-primary"></i>
-                    <div>
-                      <p className="fw-medium mb-1">Experience:</p>
-                      <p className="text-muted mb-0">2+ Years</p>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

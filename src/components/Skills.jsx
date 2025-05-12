@@ -24,7 +24,7 @@ const skills = [
       },
       { name: "HTML5", level: 95, icon: "file-earmark-code", color: "#E34F26" },
       { name: "CSS3", level: 90, icon: "file-earmark-code", color: "#1572B6" },
-      { name: "Bootstrap", level: 85, icon: "bootstrap", color: "#7952B3" },
+      
       { name: "JavaScript", level: 90, icon: "file-earmark-code", color: "#F7DF1E" },
     ],
   },
@@ -37,6 +37,18 @@ const skills = [
       { name: "Express.js", level: 85, icon: "server", color: "#000000" },
       { name: "MongoDB", level: 80, icon: "database", color: "#47A248" },
       { name: "RESTful APIs", level: 85, icon: "box-arrow-in-down", color: "#00C7B7" },
+      { name: "PHP", level: 85, icon: "code-slash", color: "#777BB4" },
+      { name: "MySQL", level: 80, icon: "database", color: "#4479A1" },
+    ],
+  },
+  {
+    category: "CMS & Frameworks",
+    icon: "window",
+    color: "#FF6B6B",
+    items: [
+      { name: "WordPress", level: 85, icon: "wordpress", color: "#21759B" },
+      { name: "Tailwind CSS", level: 85, icon: "palette", color: "#06B6D4" },
+      { name: "Bootstrap", level: 85, icon: "bootstrap", color: "#7952B3" },
     ],
   },
   {

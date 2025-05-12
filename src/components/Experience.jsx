@@ -3,40 +3,59 @@ import { useInView } from "react-intersection-observer"
 const experiences = [
   {
     id: 1,
-    role: "Full Stack Developer",
-    company: "Code Tech IT Solutions",
-    location: "Morbi, Gujarat, India",
+    role: "Front End Developer",
+    company: "Elvis Software Private Limited",
+    location: "Rajkot, Gujarat, India",
     period: "2025 - Present",
     projectName: "La Cosmex",
-    websiteLink: "https://www.lacosmexstore.com/", // Will be updated when provided
-    description: "Full Stack Development, MERN Stack, Web Development",
+    websiteLink: "https://www.lacosmexstore.com/",
+    description: "E-commerce platform for beauty and cosmetic products, featuring a modern and user-friendly interface with secure payment integration.",
     responsibilities: [
-      "Developed and maintained La Cosmex e-commerce website",
-      "Implemented real-time chat application features",
-      "Created responsive and user-friendly interfaces",
-      "Integrated payment gateways and authentication systems",
-      "Optimized application performance and security"
+      "Developed responsive e-commerce website with product catalog and shopping cart functionality",
+      "Implemented WhatsApp integration for order placement and customer communication",
+      "Created user authentication system with profile management features",
+      "Optimized website performance and implemented SEO best practices",
+      "Integrated product search and filtering functionality"
     ],
-    skills: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap"],
+    skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     color: "#4A90E2"
   },
   {
     id: 2,
-    role: "Full Stack Developer",
-    company: "Code Tech IT Solutions",
-    location: "Morbi, Gujarat, India",
+    role: "Front End Developer",
+    company: "Elvis Software Private Limited",
+    location: "Rajkot, Gujarat, India",
     period: "2025 - Present",
-    projectName: "Portfolio Website",
-    websiteLink: "", // Will be updated when provided
-    description: "Portfolio Website Development, Web Development",
+    projectName: "Parmar CNC Machines",
+    websiteLink: "https://www.parmarcncmachines.com/",
+    description: "Industrial machinery company website showcasing CNC machines, services, and technical specifications with interactive product demonstrations.",
     responsibilities: [
-      "Developed and maintained personal portfolio website",
-      "Implemented responsive design and animations",
-      "Created interactive UI components",
-      "Integrated contact form and social media links",
-      "Optimized website performance and SEO"
+      "Designed and developed responsive website for industrial machinery company",
+      "Created interactive product catalog with detailed specifications",
+      "Implemented contact forms and inquiry management system",
+      "Integrated image galleries and video demonstrations",
+      "Optimized website for industrial clients and technical users"
     ],
-    skills: ["React.js", "Bootstrap", "CSS3", "JavaScript", "HTML5"],
+    skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "React js"],
+    color: "#50C878"
+  },
+  {
+    id: 3,
+    role: "Front End Developer",
+    company: "Elvis Software Private Limited",
+    location: "Rajkot, Gujarat, India",
+    period: "2025 - Present",
+    projectName: "Elvis Software",
+    websiteLink: "https://www.elvissoftware.com/",
+    description: "Corporate website for software development company featuring services, portfolio, and client testimonials with modern design elements.",
+    responsibilities: [
+      "Developed corporate website with service portfolio and company information",
+      "Created dynamic content management system for easy updates",
+      "Implemented responsive design for all device types",
+      "Integrated contact forms and client inquiry system",
+      "Added portfolio showcase with project case studies"
+    ],
+    skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     color: "#50C878"
   }
 ]

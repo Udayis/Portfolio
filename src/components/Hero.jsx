@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import profileImage from "../assets/images/uday rathod.jpg"
+import profileImage from "../assets/images/uday rathod.jpeg"
 function Hero() {
   const heroRef = useRef(null)
   const imageRef = useRef(null)
@@ -11,12 +11,12 @@ function Hero() {
   const [typingSpeed, setTypingSpeed] = useState(150)
 
   const toRotate = [
-    "Full Stack Developer",
-    "Technical Lead",
-    "Problem Solver",
-    "Software Engineer"
+    "Web Developer",
+    "Frontend Developer",
+    "React Developer",
+    "UI Developer"
   ]
-  const period = 2000
+  const period = 1500
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -36,7 +36,7 @@ function Hero() {
     setDisplayText(updatedText);
 
     if (isDeleting) {
-      setTypingSpeed(prevSpeed => prevSpeed / 2);
+      setTypingSpeed(50);
     }
 
     if (!isDeleting && updatedText === fullText) {
@@ -45,7 +45,7 @@ function Hero() {
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setTypingSpeed(150);
+      setTypingSpeed(100);
     }
   };
 
@@ -61,7 +61,7 @@ function Hero() {
           }
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "50px" }
     )
 
     const heroElement = heroRef.current
@@ -132,7 +132,7 @@ function Hero() {
 
               {/* Floating particles */}
               <div className="particles">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(3)].map((_, i) => (
                   <div key={i} className={`particle particle-${i + 1}`}></div>
                 ))}
               </div>
@@ -144,7 +144,7 @@ function Hero() {
             <div ref={heroRef}>
               <h1 className="display-3 fw-bold mb-3">
                 <span className="text-primary">Hello, I'm </span>
-                <span className="text-gradient">DEEP GADHIYA</span>
+                <span className="text-gradient">UDAY RATHOD</span>
               </h1>
               <div className="fs-2 fw-medium mb-4">
                 <div className="typing-container" style={{ borderRight: 'none' }}>
@@ -153,8 +153,7 @@ function Hero() {
                 </div>
               </div>
               <p className="fs-5 text-muted mb-4" style={{ maxWidth: "600px" }}>
-                I am a Full Stack Developer specializing in MERN stack development.
-                Passionate about creating efficient and scalable web applications.
+                I create beatiful and functional web applications with mordern technologies. Passionate about clean code and user-centered design.
               </p>
               <div className="d-flex flex-wrap gap-3 mb-4">
                 <button
@@ -179,7 +178,19 @@ function Hero() {
               {/* Social Links */}
               <div className="d-flex gap-3">
                 <a
-                  href="https://www.linkedin.com/in/deep-gadhiya-037039361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  href="https://github.com/Udayis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon github"
+                  aria-label="GitHub"
+                >
+                  <i className="bi bi-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/uday-rathod-818293300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+
+
+"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon linkedin"
@@ -188,20 +199,22 @@ function Hero() {
                   <i className="bi bi-linkedin"></i>
                 </a>
                 <a
-                  href="https://x.com/deep_gadhiya_?t=gHfwzoOJC4M3hmVyX16XMQ&s=09"
+                  href="mailto:udayrathod060@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon twitter"
-                  aria-label="Twitter"
-                >
-                  <i className="bi bi-twitter-x"></i>
-                </a>
-                <a 
-                  href="mailto:deepgadhiya20@gmail.com"
                   className="social-icon email"
                   aria-label="Email"
                 >
-                  <i className="bi bi-envelope-fill"></i>
+                  <i className="bi bi-envelope"></i>
+                </a>
+                <a
+                  href="tel:+919313353147"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon phone"
+                  aria-label="Phone"
+                >
+                  <i className="bi bi-telephone"></i>
                 </a>
               </div>
             </div>
@@ -223,13 +236,15 @@ function Hero() {
 
       <style jsx>{`
         .image-container {
-          animation: float 6s ease-in-out infinite;
+          animation: float 4s ease-in-out infinite;
           padding: 1rem;
+          will-change: transform;
         }
 
         .profile-image {
           position: relative;
           cursor: pointer;
+          will-change: transform;
         }
 
         .profile-image:hover {
@@ -288,11 +303,12 @@ function Hero() {
 
         .particle {
           position: absolute;
-          width: 8px;
-          height: 8px;
+          width: 6px;
+          height: 6px;
           background: var(--bs-primary);
           border-radius: 50%;
-          opacity: 0.5;
+          opacity: 0.3;
+          will-change: transform;
         }
 
         @keyframes float {
@@ -305,36 +321,9 @@ function Hero() {
           50% { transform: scale(1.1) translate(-45%, -45%); opacity: 0.2; }
         }
 
-        .particle-1 { animation: moveParticle1 8s infinite; top: 20%; left: 10%; }
-        .particle-2 { animation: moveParticle2 10s infinite; top: 60%; right: 10%; }
+        .particle-1 { animation: moveParticle1 6s infinite; top: 20%; left: 10%; }
+        .particle-2 { animation: moveParticle2 8s infinite; top: 60%; right: 10%; }
         .particle-3 { animation: moveParticle3 7s infinite; bottom: 20%; left: 15%; }
-        .particle-4 { animation: moveParticle4 9s infinite; top: 40%; right: 15%; }
-        .particle-5 { animation: moveParticle5 11s infinite; bottom: 30%; right: 20%; }
-
-        @keyframes moveParticle1 {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(40px, 20px) rotate(180deg); }
-        }
-
-        @keyframes moveParticle2 {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(-30px, -25px) rotate(-180deg); }
-        }
-
-        @keyframes moveParticle3 {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(25px, -30px) rotate(90deg); }
-        }
-
-        @keyframes moveParticle4 {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(-30px, 30px) rotate(-90deg); }
-        }
-
-        @keyframes moveParticle5 {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(35px, -35px) rotate(135deg); }
-        }
 
         .social-icon {
           width: 40px;
@@ -386,6 +375,18 @@ function Hero() {
           background: #EA4335;
           color: white;
           box-shadow: 0 5px 15px rgba(234, 67, 53, 0.4);
+        }
+
+        .social-icon.phone {
+          background: rgba(255,255,255,0.08);
+          color: #111;
+          border: 1.5px solid rgba(74,144,226,0.1);
+        }
+        .social-icon.phone:hover {
+          background: #111;
+          color: #fff;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+          border: 1.5px solid #111;
         }
 
         @media (max-width: 991.98px) {

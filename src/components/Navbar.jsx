@@ -9,7 +9,6 @@ const navLinks = [
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
-  { name: "Contact", href: "#contact" },
 ]
 
 function Navbar() {
@@ -20,36 +19,31 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
-    }
 
-    const handleIntersection = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id
-          setActiveSection(sectionId)
+      // Scrollspy logic: find the section closest to the top
+      let closestSection = 'home';
+      let minDistance = Infinity;
+      navLinks.forEach(({ href }) => {
+        const sectionId = href.replace('#', '');
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const distance = Math.abs(rect.top - 80); // 80px offset for navbar height
+          if (rect.top <= 120 && distance < minDistance) {
+            minDistance = distance;
+            closestSection = sectionId;
+          }
         }
-      })
-    }
+      });
+      setActiveSection(closestSection);
+    };
 
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.2,
-      rootMargin: "-20% 0px -20% 0px"
-    })
-
-    navLinks.forEach(({ href }) => {
-      const sectionId = href.replace('#', '')
-      const section = document.getElementById(sectionId)
-      if (section) {
-        observer.observe(section)
-      }
-    })
-
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-      observer.disconnect()
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)

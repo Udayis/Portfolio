@@ -1,58 +1,64 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
-import ecommerceImage from "../assets/images/E-commerce Website.png"
-import portfolioImage from "../assets/images/portfoliowebsite.png"
-import corporateImage from "../assets/images/corporatewebsite.png"
-import travelImage from "../assets/images/travelbookingwebsite.png"
-const categories = ["All", "Web App", "Landing Page", "E-commerce", "UI/UX"]
+import elvisImage from "../assets/images/corporatewebsite.png"
+import lacosmexImage from "../assets/images/E-commerce Website.png"
+import parmarcImage from "../assets/images/parmarc.png"
+
+const categories = ["All", "Web App", "Corporate", "E-commerce"]
 
 const projects = [
   {
     id: 1,
-    title: "La Cosmex",
-    company: "Associated with Code Tech Solutions",
+    title: "Elvis Software Website",
+    company: "Elvis Software Private Limited",
     period: "2025 - Present",
-    description: `A full-featured e-commerce website with the following features:
-• User authentication and authorization
-• Product catalog with categories and search
-• Shopping cart functionality
-• Secure payment integration
-• Order management system
-• Admin dashboard for product and order management`,
+    description: `Redesigned and developed the company website with modern features:
+• Responsive and professional design
+• Company services showcase
+• Team member profiles
+• Contact information
+• Interactive UI components
+• SEO optimization`,
     technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
-    color: "#4A90E2"
+    color: "#4A90E2",
+    link: "https://www.elvissoftware.com/",
+    image: elvisImage
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    company: "Associated with Code Tech Solutions",
+    title: "La Cosmex E-commerce",
+    company: "Elvis Software Private Limited",
     period: "2025 - Present",
-    description: `A personal portfolio website showcasing my work and skills:
-• Responsive and modern design
-• Interactive UI components
-• Project showcase section
-• Contact form integration
-• Social media links
-• SEO optimization`,
-    technologies: ["React.js", "Bootstrap", "CSS3", "JavaScript", "HTML5"],
-    color: "#50C878"
+    description: `Developed a full-featured e-commerce platform:
+• User authentication system
+• Product catalog with categories
+• Shopping cart functionality
+• Secure payment integration
+• Order management system
+• Admin dashboard`,
+    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    color: "#E24796",
+    link: "https://www.lacosmexstore.com/",
+    image: lacosmexImage
   },
   {
     id: 3,
-    title: "Chat Application",
-    company: "Associated with Code Tech Solutions",
+    title: "Parmar CNC Machines",
+    company: "Elvis Software Private Limited",
     period: "2025 - Present",
-    description: `A real-time chat application with the following features:
-• Real-time messaging using WebSocket
-• User authentication and profiles
-• Group chat functionality
-• Message history and search
-• File sharing capabilities
-• Online/offline status indicators`,
-    technologies: ["HTML5", "CSS3", "JavaScript", "Socket.io", "Express.js"],
-    color: "#FF6B6B"
+    description: `Created a professional website for industrial machinery:
+• Company profile and services
+• Product catalog
+• Contact information
+• Inquiry form
+• Responsive design
+• SEO optimization`,
+    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "React js"],
+    color: "#ACC75B",
+    link: "https://www.parmarcncmachines.com/",
+    image: parmarcImage
   }
 ]
 
@@ -70,15 +76,15 @@ function Projects() {
             Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-muted mx-auto" style={{ maxWidth: "800px", fontSize: "1.2rem" }}>
-            A showcase of my key projects, demonstrating my expertise in Android development and technical leadership.
+            A showcase of my key projects at Elvis Software Private Limited, demonstrating my expertise in web development and UI/UX design.
           </p>
         </div>
 
-        <div ref={ref} className="row g-4">
+        <div ref={ref} className="row g-4 justify-content-center">
           {projects.map((project, index) => (
             <div 
               key={project.id} 
-              className="col-lg-6"
+              className="col-12 col-md-6 col-lg-4"
             >
               <div 
                 className={`card custom-card h-100 ${inView ? 'animate-fade-in' : 'opacity-0'}`}
@@ -87,9 +93,14 @@ function Projects() {
                   '--accent-color': project.color 
                 }}
               >
+                <img
+                  src={project.image}
+                  alt="Project visual preview"
+                  className="project-preview-img-top"
+                />
                 <div className="card-body">
                   <div className="d-flex justify-content-between align-items-start mb-3">
-                    <div>
+                    <div style={{width: '100%'}}>
                       <h3 className="project-title">{project.title}</h3>
                       <p className="company-name text-muted mb-2">{project.company}</p>
                       <div className="period-badge">
@@ -97,12 +108,6 @@ function Projects() {
                         {project.period}
                       </div>
                     </div>
-                  </div>
-
-                  <div className="project-description text-muted mb-4">
-                    {project.description.split('\n').map((line, i) => (
-                      <p key={i} className="mb-1">{line}</p>
-                    ))}
                   </div>
 
                   <div className="technologies">
@@ -121,6 +126,17 @@ function Projects() {
                         </span>
                       ))}
                     </div>
+                  </div>
+
+                  <div className="mt-4">
+                    <a 
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                    >
+                      View Project
+                    </a>
                   </div>
                 </div>
               </div>
@@ -169,12 +185,6 @@ function Projects() {
           color: #2c3e50;
         }
 
-        .project-description {
-          font-size: 1rem;
-          line-height: 1.6;
-          white-space: pre-line;
-        }
-
         .tech-title {
           font-size: 1.1rem;
           font-weight: 600;
@@ -198,24 +208,21 @@ function Projects() {
           transition: all 0.3s ease;
         }
 
-        .tech-badge:hover {
-          background: var(--accent-color, var(--bs-primary));
-          color: white;
+        .project-preview-img-top {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          display: block;
+          object-fit: contain;
+          background: #f8f9fa;
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          margin: 0;
+          padding: 0;
         }
 
-        .animate-fade-in {
-          animation: fadeIn 0.5s ease forwards;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        .project-preview-img {
+          display: none;
         }
       `}</style>
     </section>

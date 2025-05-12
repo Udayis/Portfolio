@@ -21,8 +21,8 @@ const education = [
     id: 2,
     degree: "Higher Secondary Certificate (HSC)",
     field: "Science",
-    school: "Nirmal Science School",
-    location: "Morbi, Gujarat, India",
+    school: "Mahatma Gandhi Science School",
+    location: "Rajkot, Gujarat, India",
     period: "2020 - 2021",
     description: "Completed higher secondary education with focus on science and mathematics.",
     achievements: [
@@ -38,9 +38,9 @@ const education = [
 const certifications = [
   {
     id: 1,
-    name: "Full Stack Developer",
-    issuer: "CodeTech IT Solutions",
-    date: "Jan 2025 - April 2025",
+    name: "Web Design & Development",
+    issuer: "Arena Animation",
+    date: "July 2024 - Present",
     icon: "building",
     color: "#FF6B6B"
   },
