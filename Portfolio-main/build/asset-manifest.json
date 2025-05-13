@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9468af17.css",
+    "main.js": "/static/js/main.41eac1cd.js",
+    "static/media/parmarc.png": "/static/media/parmarc.74d48848b55783b754e6.png",
+    "static/media/E-commerce Website.png": "/static/media/E-commerce Website.86e71ece9cad87389c55.png",
+    "static/media/corporatewebsite.png": "/static/media/corporatewebsite.aa6cc29ff7353538a013.png",
+    "static/media/uday rathod.jpeg": "/static/media/uday rathod.fda4fc4ec4ee643a7f8b.jpeg",
+    "index.html": "/index.html",
+    "main.9468af17.css.map": "/static/css/main.9468af17.css.map",
+    "main.41eac1cd.js.map": "/static/js/main.41eac1cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9468af17.css",
+    "static/js/main.41eac1cd.js"
+  ]
+}

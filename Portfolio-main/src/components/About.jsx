@@ -12,7 +12,7 @@ function About() {
       <div className="container py-5">
         <div className="text-center mb-5">
           <h2 className="display-5 mb-4">
-            About <span className="text-primary">Me</span>
+            About <span className="text-primary">Me 1231321</span>
           </h2>
           <p className="text-muted mx-auto" style={{ maxWidth: "800px", fontSize: "1.2rem" }}>
             Passionate Front End Developer specializing in creating responsive and user-friendly websites with modern technologies.
@@ -69,7 +69,7 @@ function About() {
                     </div>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
